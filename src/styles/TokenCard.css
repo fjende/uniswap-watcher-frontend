@@ -1,13 +1,13 @@
 .tokenCard {
-    width: 300px;
-    height: 300px;
-    background-color: rgb(43, 70, 226);
+    height: 150px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .tokenCard_text{
-    color: white;
     align-self: center;
+    font-size: larger;
+    font-weight: 500;
+    font-family: Roboto;
 }
