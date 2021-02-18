@@ -8,7 +8,7 @@ Just some basic frotend for testing the /GET request after running the server fr
 2. `cd` into the repo
 3. run `npm i` to install the dependencies 
 
-## Available Scripts
+## available Scripts
 
 In the project directory, you can run:
 
@@ -17,6 +17,4 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
