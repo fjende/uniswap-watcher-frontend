@@ -8,7 +8,7 @@ Just some basic frotend for testing the /GET request after running the server fr
 2. `cd` into the repo
 3. run `npm i` to install the dependencies 
 
-## available Scripts
+## available scripts
 
 In the project directory, you can run:
 
