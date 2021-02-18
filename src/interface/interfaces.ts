@@ -1,6 +1,6 @@
 export interface IToken {
     name: string;
-    _id?: number;
+    _id: string;
     createdAt: Date;
     updatedAt: Date;
     __v: number;

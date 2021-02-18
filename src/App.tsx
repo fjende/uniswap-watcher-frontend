@@ -7,35 +7,35 @@ import axios from 'axios'
 const defaultData: IData[] = [];
 
 const App: React.FC = () => {
+    
+  const [data, setData]: [
+    IData[], 
+    (data: IData []) => void
+  ] = useState(defaultData);  
 
-const [data, setData]: [
-  IData[], 
-  (data: IData []) => void
-] = useState(defaultData);  
+  const [loading, setLoading]: [
+    boolean,
+    (loading: boolean) => void
+  ] = useState<boolean>(true);
 
-const [loading, setLoading]: [
-  boolean,
-  (loading: boolean) => void
-] = useState<boolean>(true);
+  const fetchData = () => {
+    axios
+    .get<IData[]>(`${config.api.myserverurl}/api/tokens`)
+    .then((response) =>{
+      setData(response.data);
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.log(error)
+      setLoading(false);
+    })
+  }
 
-const fetchData = () => {
-  axios
-  .get<IData[]>(`${config.api.myserverurl}/api/tokens`)
-  .then((response) =>{
-    setData(response.data);
-    setLoading(false);
-  })
-  .catch((error) => {
-    console.log(error)
-    setLoading(false);
-  })
-}
+  useEffect(() => {
+    fetchData()
+  }, [])
 
-useEffect(() => {
-  fetchData()
-}, [])
-
-console.log(data)
+  console.log(data)
 
   return (
     <div>
