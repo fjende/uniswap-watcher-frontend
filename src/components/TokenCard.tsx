@@ -1,9 +1,12 @@
 import React from 'react'
 
-export default function TokenCard() {
+export default function TokenCard(props: any) {
+
+    const { tokenData } = props
+
     return (
         <div>
-            TokenName
+            tokenData.name
         </div>
     )
 }
